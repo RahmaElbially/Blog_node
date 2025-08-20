@@ -9,8 +9,6 @@ const app = express();
 connectDB();
 app.use(express.json());
 app.use(morgan('dev'))
-const cors = require("cors");
-
 const corsOptions = {
     origin: [
         "https://blogs-kdn47020t-rahma-elbiallys-projects.vercel.app",
