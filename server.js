@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 const corsOptions = {
     credentials: true,
-    origin: ["http://localhost:5173", "https://blogs-beta-henna.vercel.app/"]
+    origin: ["http://localhost:5173", "https://blogs-nu-ruby.vercel.app/"]
 };
 app.use(cors(corsOptions));
 
