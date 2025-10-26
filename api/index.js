@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 const corsOptions = {
     origin: [
-        "https://blogs-nu-ruby.vercel.app/",
+        "https://blogs-nu-ruby.vercel.app",
         "http://localhost:5173"
     ],
     credentials: true,
@@ -34,3 +34,7 @@ app.use('/blogs', blogsRouter);
 app.use(errorHandling);
 
 module.exports = serverless(app);
+
+// app.listen(process.env.PORT, () => {
+//     console.log(`Server is listening on port ${process.env.PORT}`);
+// })
