@@ -17,7 +17,7 @@ app.use(morgan('dev'))
 //     ],
 //     credentials: true,
 // };
-app.use(cors(corsOptions));
+app.use(cors());
 
 // File Imports
 const errorHandling = require('../middlewares/errorHandling.middleware');
