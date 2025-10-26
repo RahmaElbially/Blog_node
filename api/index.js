@@ -30,6 +30,10 @@ const blogsRouter = require('../routes/blogs.route');
 app.use('/users', usersRouter);
 app.use('/blogs', blogsRouter);
 
+app.get('/', (req, res) => {
+    res.send('API is running successfully');
+});
+
 // Error Handling
 app.use(errorHandling);
 
