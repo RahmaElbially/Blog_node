@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-const cors = require('cors');
+// const cors = require('cors');
 const morgan = require('morgan');
 const connectDB = require('../db');
 const app = express();
@@ -10,14 +10,14 @@ connectDB();
 app.use(express.json());
 app.use(morgan('dev'))
 
-const corsOptions = {
-    origin: [
-        "https://blogs-nu-ruby.vercel.app",
-        "http://localhost:5173"
-    ],
-    credentials: true,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: [
+//         "https://blogs-nu-ruby.vercel.app",
+//         "http://localhost:5173"
+//     ],
+//     credentials: true,
+// };
+// app.use(cors(corsOptions));
 
 // File Imports
 const errorHandling = require('../middlewares/errorHandling.middleware');
