@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-// const cors = require('cors');
+const cors = require('cors');
 const morgan = require('morgan');
 const connectDB = require('../db');
 const app = express();
@@ -17,7 +17,7 @@ app.use(morgan('dev'))
 //     ],
 //     credentials: true,
 // };
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // File Imports
 const errorHandling = require('../middlewares/errorHandling.middleware');
